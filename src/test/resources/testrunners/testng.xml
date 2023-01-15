@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Opencart App Test Regression Suite" thread-count="4"
+       parallel="tests" verbose="4">
+
+    <listeners>
+        <listener
+                class-name="listeners.ExtentReportListener"/>
+        <listener
+                class-name="listeners.TestAllureListener"/>
+    </listeners>
+
+    <test name="Login Page Test">
+
+        <classes>
+            <class name="tests.LoginPageTest">
+                <methods>
+                    <include name="loginPageTitleTest"/>
+                    <include name="loginPageURLTest"/>
+                    <exclude name="forgotPwdLinkExistTest"/>
+                    <include name="validLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+</suite>
