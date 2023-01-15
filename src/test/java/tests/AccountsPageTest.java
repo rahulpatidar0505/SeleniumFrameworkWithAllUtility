@@ -28,21 +28,21 @@ public class AccountsPageTest extends BaseTest {
 	@Test
 	public void selectProductsAndCheckoutTest() {
 		accountPage.selectJacket();
-		accountPage.selectSpecificProduct("Montana Wind Jacket", "M", "Green");
+		accountPage.selectSpecificProduct(AppConstants.MONTANA_JACKET_NAME, "M", "Green");
 		Assert.assertEquals(accountPage.getProductAddedMsg(),
 				"You added Montana Wind Jacket to your shopping cart.");
 		Assert.assertEquals(accountPage.getProductName(), AppConstants.MONTANA_JACKET_NAME);
 		Assert.assertEquals(accountPage.getProductPrice(), AppConstants.MONTANA_JACKET_PRICE);
 
 		accountPage.selectJacket();
-		accountPage.selectSpecificProduct("Lando Gym Jacket", "L", "Blue");
+		accountPage.selectSpecificProduct(AppConstants.LANDO_JACKET_NAME, "L", "Blue");
 		Assert.assertEquals(accountPage.getProductAddedMsg(),
 				"You added Lando Gym Jacket to your shopping cart.");
 		Assert.assertEquals(accountPage.getProductName(), AppConstants.LANDO_JACKET_NAME);
 		Assert.assertEquals(accountPage.getProductPrice(), AppConstants.LANDO_JACKET_PRICE);
 
 		accountPage.selectPant();
-		accountPage.selectSpecificProduct("Zeppelin Yoga Pant", "32", "Red");
+		accountPage.selectSpecificProduct(AppConstants.ZEPPELIN_JACKET_NAME, "32", "Red");
 		Assert.assertEquals(accountPage.getProductAddedMsg(),
 				"You added Zeppelin Yoga Pant to your shopping cart.");
 		Assert.assertEquals(accountPage.getProductName(), AppConstants.ZEPPELIN_JACKET_NAME);
